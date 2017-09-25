@@ -3,8 +3,6 @@ package com.wonderslab.baseprojectskeleton.di;
 import android.app.Application;
 
 import com.wonderslab.baseprojectskeleton.BaseApplication;
-import com.wonderslab.baseprojectskeleton.data.user.UserDataProvider;
-import com.wonderslab.baseprojectskeleton.data.user.di.UserDataSourceProviderModule;
 
 import javax.inject.Singleton;
 
@@ -19,7 +17,7 @@ import dagger.android.DaggerApplication;
  */
 
 @Singleton
-@Component(modules = {AndroidInjectionModule.class, AppModule.class, ActivityBuilder.class, UserDataSourceProviderModule.class})
+@Component(modules = {AndroidInjectionModule.class, AppModule.class, ActivityBuilder.class, DataProvidersModule.class})
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
 
     @Override
@@ -27,13 +25,10 @@ public interface AppComponent extends AndroidInjector<DaggerApplication> {
 
     void inject(BaseApplication application);
 
-    UserDataProvider userDataProvider();
-
     @Component.Builder
     interface Builder {
         @BindsInstance
         Builder application(Application application);
-
         AppComponent build();
     }
 

@@ -1,6 +1,6 @@
 package com.wonderslab.baseprojectskeleton.data.user.source.remote;
 
-import com.wonderslab.baseprojectskeleton.data.user.User;
+import com.wonderslab.baseprojectskeleton.data.user.source.entity.User;
 import com.wonderslab.baseprojectskeleton.data.user.UserDataSource;
 
 import javax.inject.Inject;

@@ -1,5 +1,6 @@
 package com.wonderslab.baseprojectskeleton.data.user;
 
+import com.wonderslab.baseprojectskeleton.data.user.source.entity.User;
 import com.wonderslab.baseprojectskeleton.di.source_qualifier.Local;
 import com.wonderslab.baseprojectskeleton.di.source_qualifier.Remote;
 

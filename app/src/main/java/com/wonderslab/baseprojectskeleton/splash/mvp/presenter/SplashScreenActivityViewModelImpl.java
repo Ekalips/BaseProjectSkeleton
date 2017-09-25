@@ -1,7 +1,5 @@
 package com.wonderslab.baseprojectskeleton.splash.mvp.presenter;
 
-import android.content.Context;
-
 import com.wonderslab.baseprojectskeleton.base.data.BindingObservable;
 import com.wonderslab.baseprojectskeleton.data.user.UserDataProvider;
 import com.wonderslab.baseprojectskeleton.di.scopes.ActivityScope;
@@ -23,8 +21,8 @@ public class SplashScreenActivityViewModelImpl extends SplashScreen.SplashViewMo
     private UserDataProvider userDataProvider;
 
     @Inject
-    SplashScreenActivityViewModelImpl(Context context, UserDataProvider userDataProvider) {
-        this.userDataProvider  = userDataProvider;
+    SplashScreenActivityViewModelImpl(UserDataProvider userDataProvider) {
+        this.userDataProvider = userDataProvider;
     }
 
 
